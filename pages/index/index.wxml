@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<import src="../index/article_item/article_item"></import>
+<view class='container'>
+  <swiper class="index_swiper" autoplay="{{true}}" circular="{{true}}" catch:tap="moveToArticle">
+    <swiper-item>
+        <image src="../../images/slider/iqiyi.png" data-postid='5'></image>
+    </swiper-item>
+    <swiper-item>
+        <image src="../../images/slider/vr.png" data-postid='4'></image>
+    </swiper-item>
+    <swiper-item>
+        <image src="../../images/slider/wx.png" data-postid='3'></image>
+    </swiper-item>
+  </swiper>
+  <view class="index_content">
+    <block wx:for="{{postList}}">
+      <view data-postid="{{item.postId}}" catch:tap="openArticle">
+        <template is="article_item" data="{{...item}}"  />
+      </view>
+    </block>
+  </view>
+</view>

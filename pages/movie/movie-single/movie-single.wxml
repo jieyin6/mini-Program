@@ -1,0 +1,10 @@
+<import src="../star/star"></import>
+<template name="movieSingle">
+   <view class="single_container">
+       <image class="single_image" src="{{imgUrl}}"></image>
+       <text class="single_title">{{title}}</text>
+       <view class="single_star">
+           <template is="star" data="{{stars}}"></template>
+       </view>
+   </view>
+</template>

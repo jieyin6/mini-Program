@@ -1,0 +1,7 @@
+{
+    "navigationBarBackgroundColor":"#405f80",
+    "navigationBarTitleText":"Hello article",
+    "navigationBarTextStyle":"black",
+    "navigationStyle": "custom",
+    "backgroundColor":"red"
+  }

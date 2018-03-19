@@ -1,0 +1,10 @@
+<template name="star">
+    <view class="star">
+        <view wx:for="{{stars}}">
+            <image src="../../../images/icon/star.png">{{item}}</image>
+        </view>
+        <view wx:for="{{5 - stars}}">
+            <image src="../../../images/icon/none-star.png">{{item}}</image>
+        </view>
+    </view>
+</template>

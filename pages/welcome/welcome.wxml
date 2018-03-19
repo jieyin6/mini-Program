@@ -1,0 +1,16 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="userinfo-btn" bind:tap="tapStart">
+    <button size="mini" type="primary">点击进入</button>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto" bindtap="viewTap">{{motto}}</text>
+  </view>
+ </view>

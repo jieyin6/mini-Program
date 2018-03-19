@@ -1,0 +1,23 @@
+@import "../star/star";
+.single_container{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 22rpx;
+}
+.single_image{
+    width: 200rpx;
+    height: 270rpx;
+    padding-bottom: 20rpx
+}
+.single_title{
+    margin-bottom: 16rpx;
+    font-size: 24rpx;
+    text-align: center;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.single_star{
+    position: relative;
+}

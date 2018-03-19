@@ -1,0 +1,7 @@
+<!--logs.wxml-->
+<import src="./movie-item/movie-item"></import>
+<view>
+  <template is="movieItem" data="{{...nowData}}"></template>
+  <template is="movieItem" data="{{...topData}}"></template>
+  <template is="movieItem" data="{{...comingData}}"></template>
+</view>

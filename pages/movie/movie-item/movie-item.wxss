@@ -1,0 +1,32 @@
+@import "../movie-single/movie-single";
+.movie_container{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+.movie_inner{
+    margin: 0 auto 20rpx;
+}
+.movie_head{
+    padding: 30rpx 20rpx 22rpx;
+}
+.head_text{
+    font-size: 24rpx;
+}
+.head_more{
+    float: right;
+}
+.more_text{
+    margin-right: 10rpx;
+    font-size:24rpx;
+    color: #1f4ba5; 
+    vertical-align: middle
+}
+.more_icon{
+    width: 9rpx;
+    height: 16rpx;
+    vertical-align: middle
+}
+.movie_content{
+    display: flex;
+}

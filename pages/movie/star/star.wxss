@@ -1,0 +1,8 @@
+.star{
+    display: flex;
+    justify-content: center
+}
+.star image{
+    width: 30rpx;
+    height: 30rpx;
+}

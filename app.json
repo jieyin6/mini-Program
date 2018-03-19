@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/welcome/welcome",
+    "pages/index/index",
+    "pages/index/article_detail/article_detail",
+    "pages/movie/movie"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Fun",
+    "navigationBarTextStyle":"black"
+   },
+   "tabBar":{
+     "color": "#000",
+     "list":[{
+       "pagePath":"pages/index/index",
+       "text":"阅读",
+       "iconPath":"images/tabbar/yuedu.png",
+       "selectedIconPath":"images/tabbar/yuedu_hl.png"
+     },{
+       "pagePath":"pages/movie/movie",
+       "text":"电影",
+       "iconPath": "images/tabbar/dianying.png",
+       "selectedIconPath": "images/tabbar/dianying_hl.png"
+     }]
+   },
+   "networkTimeout":{
+     "request":5000,
+     "downloadFile":5000
+   },
+   "debug":true
+}

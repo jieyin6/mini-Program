@@ -1,0 +1,19 @@
+<import src="../movie-single/movie-single"></import>
+<template name="movieItem">
+   <view class="movie_container">
+       <view class="movie_inner">
+       <view class="movie_head">
+           <text class="head_type">{{Type}}</text>
+           <view class="head_more">
+               <text class="more_text">更多</text>
+               <image src="../../../images/icon/arrow-right.png" class="more_icon"></image>
+           </view>
+       </view>
+       <view class="movie_content">
+           <block wx:for="{{movies}}">
+               <template is="movieSingle" data="{{...item}}"></template>
+           </block>
+       </view>
+       </view>
+   </view>
+</template>

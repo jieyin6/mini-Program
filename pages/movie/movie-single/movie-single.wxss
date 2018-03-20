@@ -1,9 +1,9 @@
 @import "../star/star";
 .single_container{
-    flex: 1;
+    width: 200rpx;
     display: flex;
     flex-direction: column;
-    padding: 0 22rpx;
+    padding: 22rpx 22rpx;
 }
 .single_image{
     width: 200rpx;

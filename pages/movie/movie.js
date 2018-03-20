@@ -43,18 +43,31 @@ Page({
     movieData['movies'] = movies
     console.log(movieData)
     if(name === 'top250Movies'){
+      movieData['id'] = 1
       this.setData({
-        topData:movieData
+        topData:movieData,
       })
     }else if(name === 'comingSoonMovies' ){
+      movieData['id'] = 2
       this.setData({
-        comingData:movieData
+        comingData:movieData,
+        
       })
     }else{
+      movieData['id'] = 0
       this.setData({
-        nowData:movieData
-      })
+        nowData:movieData,
+        })
     }
     
-  }
+  },
+  showMore(event){
+    var id = event.currentTarget.dataset.testid
+    wx.navigateTo({
+        url:'./more-movie/more-movie?id='+id,
+        fail(err){
+            console.log(err)
+        }
+    })
+}
 })

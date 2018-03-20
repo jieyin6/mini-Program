@@ -5,7 +5,7 @@
     background-color: #fff;
 }
 .movie_inner{
-    margin: 0 auto 20rpx;
+    margin: 0 auto;
 }
 .movie_head{
     padding: 30rpx 20rpx 22rpx;

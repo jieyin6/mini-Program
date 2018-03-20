@@ -1,0 +1,8 @@
+@import '../movie-single/movie-single';
+.more-container{
+    height: 1300rpx;
+}
+.more-item{
+    float: left;
+    margin-bottom: 30rpx;
+}

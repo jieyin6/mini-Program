@@ -1,0 +1,8 @@
+<import src="../movie-single/movie-single"></import>
+ <scroll-view class="more-container" scroll-y="{{true}}"   bindscrolltolower="update">
+        <block wx:for="{{movies}}">
+            <view class='more-item'>
+                <template  is="movieSingle" data="{{...item}}"></template>
+            </view>
+        </block>
+    </scroll-view>

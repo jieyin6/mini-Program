@@ -9,27 +9,26 @@ Page({
         movies:[]
     },
     onLoad(options){
-        if(options.id == 0){
+        var id = options.id
+        switch(id){
+            case '0' :
             this.setData({
                 url : app.globalData.baseUrl +"/v2/movie/in_theaters"
             })
-             
-        }else if(options.id == 1){
+            break
+            case '1':
             this.setData({
                 url: app.globalData.baseUrl +"/v2/movie/top250"
             })
-            
-        }else{
+            break
+            default:
             this.setData({
                 url: app.globalData.baseUrl +"/v2/movie/coming_soon"
             })
-            
         }
         this.requestData()
-       
     },
     requestData(){
-        
         var _this = this
         wx.request({
             url:_this.data.url,
@@ -57,10 +56,12 @@ Page({
         var moviearr = data.subjects
         var newarr = []
         moviearr.forEach(item => {
+            var title = item.title.length > 8 ? item.title.substr(0,8)+'...' :item.title
+            var stars = parseInt(item.rating.stars.substr(0,1))
             var movieobj = {}
             movieobj['imgUrl'] = item.images.large
-            movieobj['title'] = item.title.length > 8 ? item.title.substr(0,8)+'...' :item.title
-            movieobj['stars'] = parseInt(item.rating.stars.substr(0,1))
+            movieobj['title'] = title
+            movieobj['stars'] = stars
             newarr.push(movieobj)
         });
         var whole = this.data.movies.concat(newarr)
@@ -74,7 +75,7 @@ Page({
             return
         }
         this.setData({
-            start: this.data.page * 18 + 1 
+            start: this.data.page * 18 + 1
         })
         this.requestData()
     }

@@ -11,7 +11,7 @@
 .search-container input{
     box-sizing: border-box;
     height: 100%;
-    margin: 5rpx 50rpx 5rpx 10rpx;
+    margin: 5rpx 80rpx 5rpx 10rpx;
 }
 .input-placeholder{
     color: #eee
@@ -19,7 +19,7 @@
 .search-container image{
     position: absolute;
     top: 50%;
-    right: 10rpx;
+    right: 30rpx;
     width: 30rpx;
     height: 30rpx;
     margin-top: -15rpx;

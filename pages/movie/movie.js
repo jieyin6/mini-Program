@@ -133,5 +133,12 @@ Page({
       value:'',
       searchResult:[]
     })
+  },
+  bindinput(event){
+    if(event.detail.value == ''){
+      this.setData({
+        inputValue:false
+      })
+    }
   }
 })

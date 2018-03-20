@@ -3,7 +3,7 @@
 <import src="./movie-single/movie-single"></import>
 <view>
   <view class="search-container">
-    <input type="text" placeholder="搜索电影" value="{{value}}" confirm-type='搜索' focus="{{focus}}" bindconfirm="search" bindfocus="bindfocus" bindblur="bindblur"/>
+    <input type="text" placeholder="搜索电影" value="{{value}}" confirm-type='搜索' bindinput="bindinput" focus="{{focus}}" bindconfirm="search" bindfocus="bindfocus" bindblur="bindblur"/>
     <image catch:tap="clearValue" src="../../images/icon/xx.png"></image>
   </view>
   <view wx:if="{{!inputValue}}">

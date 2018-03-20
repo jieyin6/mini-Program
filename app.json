@@ -5,6 +5,7 @@
     "pages/index/article_detail/article_detail",
     "pages/movie/movie",
     "pages/movie/more-movie/more-movie"
+    
   ],
   "window":{
     "backgroundTextStyle":"light",

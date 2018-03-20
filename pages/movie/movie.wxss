@@ -1,1 +1,30 @@
 @import "./movie-item/movie-item";
+@import "./movie-single/movie-single";
+.search-container{
+    box-sizing: border-box;
+    width: 100%;
+    height: 80rpx;
+    border: 1rpx solid #eee;
+    margin-bottom: 20rpx;
+    position: relative;
+}
+.search-container input{
+    box-sizing: border-box;
+    height: 100%;
+    margin: 5rpx 50rpx 5rpx 10rpx;
+}
+.input-placeholder{
+    color: #eee
+}
+.search-container image{
+    position: absolute;
+    top: 50%;
+    right: 10rpx;
+    width: 30rpx;
+    height: 30rpx;
+    margin-top: -15rpx;
+}
+.search-result {
+    float:left;
+    margin-bottom:30rpx
+}

@@ -1,7 +1,19 @@
 <!--logs.wxml-->
 <import src="./movie-item/movie-item"></import>
+<import src="./movie-single/movie-single"></import>
 <view>
-  <template is="movieItem" data="{{...nowData}}"></template>
-  <template is="movieItem" data="{{...topData}}"></template>
-  <template is="movieItem" data="{{...comingData}}"></template>
+  <view class="search-container">
+    <input type="text" placeholder="搜索电影" value="{{value}}" confirm-type='搜索' focus="{{focus}}" bindconfirm="search" bindfocus="bindfocus" bindblur="bindblur"/>
+    <image catch:tap="clearValue" src="../../images/icon/xx.png"></image>
+  </view>
+  <view wx:if="{{!inputValue}}">
+    <template is="movieItem" data="{{...nowData}}"></template>
+    <template is="movieItem" data="{{...topData}}"></template>
+    <template is="movieItem" data="{{...comingData}}"></template>
+  </view>
+  <view wx:if="{{inputValue}}" wx:for="{{searchResult}}" >
+    <view class="search-result">
+      <template is="movieSingle" data="{{...item}}"></template>
+    </view>
+  </view>
 </view>

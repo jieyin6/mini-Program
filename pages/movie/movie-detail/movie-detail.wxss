@@ -1,0 +1,141 @@
+@import "../star/star";
+.detail-header{
+    position: relative;
+    width: 100%;
+}
+.detail-header::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3rpx;
+    background-color:#eee;
+}
+.header-top{
+    padding: 40rpx;
+    margin-bottom:60rpx;
+    position: relative;
+}
+.top-name{
+    margin-bottom: 15rpx;
+    font-size: 50rpx;
+    color: #fff;
+    font-weight: 800;
+}
+.top-time{
+    margin-bottom: 60rpx;
+    font-size: 30rpx;
+    color: #fff;
+}
+ .top-num{
+    font-size: 20rpx;
+    color: #696969;
+}
+.top-num text{
+    color: red
+}
+.num-text{
+    display: inline-block;
+    margin-left: 10rpx;
+}
+.top-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 300rpx;
+    filter:blur(20px);
+    -webkit-filter:blur(20px);
+}
+.header-bottom{
+    padding:0 0 40rpx 40rpx;
+}
+.bottom-name{
+    color: #000;
+    margin-bottom: 25rpx;
+}
+.bottom-star-container{
+    display: flex;
+}
+.bottom-star{
+    margin-bottom: -10rpx;
+}
+.star-text{
+    display: inline-block;
+    margin-left: 10rpx;
+    vertical-align: middle
+}
+.bottom-star,.bottom-style{
+    margin-bottom: 15rpx
+}
+.bottom-name,.bottom-style,.star-text{
+    font-size: 25rpx;
+}
+.bottom-style{
+    color: gray;
+}
+.style-type{
+    display: inline-block;
+    margin-right: 20rpx
+}
+.header-image{
+    position: absolute;
+    right: 20rpx;
+    top: 200rpx;
+    width: 200rpx;
+    height: 250rpx;
+}
+.detail-content{
+    position: relative;
+    padding: 50rpx 40rpx;
+}
+.detail-content::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3rpx;
+    background-color:#eee;
+}
+.content-title{
+    margin-bottom: 30rpx;
+    font-size: 40rpx;
+    color: gray;
+    font-weight: 500;
+}
+.content{
+    font-size: 30rpx;
+    color: #000;
+}
+.detail-actor{
+    height: 400rpx;
+    padding: 40rpx;
+}
+.actor-title{
+    margin-bottom: 30rpx;
+    font-size: 40rpx;
+    color: gray;
+    font-weight: 500;
+}
+.actor-scroll{
+    display: flex;
+    height: 100%;
+    white-space: nowrap;
+ }
+.actor-item{
+    display: inline-block;
+    width: 250rpx;
+    height: 300rpx;
+    margin-right: 30rpx;
+}
+.actor-item image{
+    width: 250rpx;
+    height: 300rpx;
+}
+.actor-item .actor-name{
+    font-size: 30rpx;
+    color: #000;
+    text-align: center
+}

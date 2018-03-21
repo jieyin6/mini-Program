@@ -1,6 +1,6 @@
 <import src="../star/star"></import>
 <template name="movieSingle">
-   <view class="single_container">
+   <view class="single_container" data-setid="{{id}}" catch:tap="showMovie">
        <image class="single_image" src="{{imgUrl}}"></image>
        <text class="single_title">{{title}}</text>
        <view class="single_star">

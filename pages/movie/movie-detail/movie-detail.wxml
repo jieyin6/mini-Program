@@ -1,0 +1,53 @@
+<import src="../star/star"></import>
+<view class="movie-detail-container">
+    <view class="detail-header">
+        <view class="header-top">
+            <view class="top-name">{{objMovie.title}}</view>
+            <view class="top-time">{{objMovie.countries}}-{{objMovie.year}}</view>
+            <view class="top-num">
+                <text>{{objMovie.wishCount}}</text> 人喜欢    
+                <text class="num-text">{{objMovie.commentsCount}}</text> 条评论
+            </view>
+            <image src="{{objMovie.images}}" mode="scaleToFill" class="top-image"></image>
+        </view>
+        <view class="header-bottom">
+            <view class="bottom-name">{{objMovie.title}}</view>
+            <view class="bottom-star-container">
+                <template class="bottom-star" is="star" data="{{stars}}"></template>
+                <text class="star-text">{{objMovie.average}}</text>
+            </view>
+            <view class="bottom-style">
+                <text class="style-type">导演</text>
+                <text>{{objMovie.director}}</text>
+            </view>
+            <view class="bottom-style">
+                <text class="style-type">影人</text>
+                    <text>{{objMovie.actor}}</text>
+               </view>
+            <view class="bottom-style">
+                <text class="style-type">类型</text>
+                <text>{{objMovie.genres}}</text>
+            </view>
+        </view>
+        <image src="{{objMovie.images}}" class="header-image"></image>
+    </view>
+    <view class="detail-content">
+        <view class="content-title">简介</view>
+        <view class="content">
+            <text wx:if="{{objMovie.summary}}">{{objMovie.summary}}</text>
+            <text wx:else>暂无介绍</text>
+        </view>
+    </view>
+
+    <view class="detail-actor" scroll-x>
+            <view class="actor-title">影人</view>
+            <scroll-view scroll-x class="actor-scroll">
+                <block wx:for="{{objMovie.casts}}">
+                    <view class="actor-item">
+                        <image src="{{item.avatars.large}}"></image>
+                        <view class="actor-name">{{item.name}}</view>
+                    </view>
+                </block>
+            </scroll-view>
+    </view>
+</view>

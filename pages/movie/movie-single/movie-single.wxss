@@ -19,5 +19,6 @@
     white-space: nowrap;
 }
 .single_star{
-    position: relative;
+    display: flex;
+    justify-content: center
 }

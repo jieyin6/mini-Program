@@ -45,6 +45,7 @@ Page({
         movieObj['imgUrl'] = item.images.large
         movieObj['title'] = title
         movieObj['stars'] = stars
+        movieObj['id'] = item.id
         movies.push(movieObj)
     });
     movieData['movies'] = movies
@@ -140,5 +141,12 @@ Page({
         inputValue:false
       })
     }
+  },
+  showMovie(event){
+    console.log(event.currentTarget.dataset.setid)
+    var id = event.currentTarget.dataset.setid
+    wx.navigateTo({
+      url:'./movie-detail/movie-detail?id='+id,
+    })
   }
 })

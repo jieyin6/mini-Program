@@ -62,6 +62,7 @@ Page({
             movieobj['imgUrl'] = item.images.large
             movieobj['title'] = title
             movieobj['stars'] = stars
+            movieobj['id'] = item.id
             newarr.push(movieobj)
         });
         var whole = this.data.movies.concat(newarr)
@@ -78,6 +79,13 @@ Page({
             start: this.data.page * 18 + 1
         })
         this.requestData()
-    }
+    },
+    showMovie(event){
+        console.log(event.currentTarget.dataset.setid)
+        var id = event.currentTarget.dataset.setid
+        wx.navigateTo({
+          url:'../movie-detail/movie-detail?id='+id,
+        })
+      }
     
 })

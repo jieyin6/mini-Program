@@ -53,7 +53,7 @@
 }
 .bottom-name{
     color: #000;
-    margin-bottom: 25rpx;
+    margin-bottom: 20rpx;
 }
 .bottom-star-container{
     display: flex;
@@ -62,9 +62,9 @@
     margin-bottom: -10rpx;
 }
 .star-text{
-    display: inline-block;
+    margin-top: 16rpx;
     margin-left: 10rpx;
-    vertical-align: middle
+    line-height: 26rpx
 }
 .bottom-star,.bottom-style{
     margin-bottom: 15rpx
